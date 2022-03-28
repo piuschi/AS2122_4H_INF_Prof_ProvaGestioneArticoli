@@ -8,11 +8,18 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
 {
     class Articolo
     {
+        public Articolo()
+        {
+        }
+
+
         // TODO: (8) aggiungere attributi privati di Articolo
         // ...
 
-        // TODO: (9) aggiungere property di sola lettura dei dati necessari all'esterno di Articolo
-        // ...
+        public string descrizione { get; }
+        public string unitaMisura { get; }
+        public int codice { get; }
+        public double prezzo { get; }
 
         public Articolo(int codice, string descrizione, string unitaMisura, double prezzo)
         {
