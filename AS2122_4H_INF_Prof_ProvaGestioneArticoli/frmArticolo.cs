@@ -14,15 +14,16 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
     {
         DialogResult status = DialogResult.Cancel;
 
-        private string descrizione { get; set; }
-        private string unitaMisura {  get; set;}
-        private double prezzo { get; set; } 
+        private string descrizione;
+        private string unitaMisura;
+        private double prezzo;
         // ...
 
         public DialogResult Status { get { return status; } }
 
-        // TODO: (6) aggiungere property di sola lettura dei dati inseriti nella frmArticoli per l'utilizzo in frmMain
-        // ...
+        public string Descrizione { get { return descrizione; } }
+        public string UnitaMisura {  get { return unitaMisura; } }
+        public double Prezzo { get { return prezzo; } }
 
         public frmArticolo()
         {
@@ -32,7 +33,15 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
         private void btnSalva_Click(object sender, EventArgs e)
         {
             // TODO: (7) passaggio all' attributo/property dei dati inseriti nella frmArticoli con controllo di valorizzazione del dato
-            // ... descrizione, unitaMisura, prezzo
+            if (descrizione==null)
+            {
+                descrizione = Descrizione;
+            }
+
+            if  (unitaMisura==null)
+            {
+                unitaMisura = UnitaMisura;
+            }
 
             status = DialogResult.OK;
             Close();

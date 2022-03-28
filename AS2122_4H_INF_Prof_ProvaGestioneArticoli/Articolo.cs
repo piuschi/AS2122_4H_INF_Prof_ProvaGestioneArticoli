@@ -12,10 +12,11 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
         {
 
         }
-
-
-        // TODO: (8) aggiungere attributi privati di Articolo
-        // ...
+       
+        private string Descrizione;
+        private string UnitaMisura;
+        private int Codice;
+        private double Prezzo;
 
         public string descrizione { get; set; }
         public string unitaMisura { get; }
@@ -24,8 +25,11 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
 
         public Articolo(int codice, string descrizione, string unitaMisura, double prezzo)
         {
-            // TODO: (10) impostazione costruttore classe Articolo come utilizzato da frmMain
-            // ...
+            
+            this.Descrizione = descrizione;
+            this.Codice = codice;
+            this.UnitaMisura = unitaMisura;
+            this.Prezzo = prezzo;
         }
 
         public string Visualizzati()
