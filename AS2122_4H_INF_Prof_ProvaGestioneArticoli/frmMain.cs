@@ -14,6 +14,7 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
     {
         List<Articolo> articoli;
 
+
         public frmMain()
         {
             InitializeComponent();
@@ -42,7 +43,7 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
             {
                 case "Visualizza articoli":
                     // TODO: (2) aggiungere visualizzazione articoli inseriti nella listbox
-                    // ... lstElenco.Items.Add(a.Visualizzati()); 
+                    lstElenco.Items.Add(a.Visualizzati()); 
                     break;
             }
         }
@@ -54,8 +55,8 @@ namespace AS2122_4H_INF_Prof_ProvaGestioneArticoli
             // Find the string in ListBox.
             int index = lstElenco.FindString(curItem);
 
-            // TODO: (3) aggiungere visualizzazione dettaglio articolo nelle label
-            // ... lblDescrizione.Text = articoli[index].Descrizione;
+            
+            lblDescrizione.Text = articoli[index].descrizione;
         }
     }
 }
